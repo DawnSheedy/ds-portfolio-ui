@@ -1,4 +1,4 @@
-name: Publish ds-portfolio-ui to ds-k8s staging
+name: Release ds-portfolio-ui to production k8s
 on:
   release:
     types: [published]
