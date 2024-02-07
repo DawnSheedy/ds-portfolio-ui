@@ -17,7 +17,7 @@ jobs:
       - name: Expose GitHub Runtime
         uses: crazy-max/ghaction-github-runtime@v3
       - name: Build image
-        run: docker build --cache-to type=gha --cache-from type=gha --platform=linux/amd64 -t ds-portfolio-ui .
+        run: docker buildx build --cache-to type=gha --cache-from type=gha --platform=linux/amd64 -t ds-portfolio-ui .
       - name: Login to container registry
         run: doctl registry login --expiry-seconds 600
       - name: Tag image
