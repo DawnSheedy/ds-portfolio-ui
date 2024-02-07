@@ -1,4 +1,4 @@
-FROM node:18-alpine as build
+FROM --platform=linux/amd64 node:18-alpine as build
 
 LABEL author "Dawn Sheedy"
 
