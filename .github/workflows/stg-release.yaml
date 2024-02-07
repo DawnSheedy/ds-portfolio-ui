@@ -21,7 +21,7 @@ jobs:
       - name: Tag image
         run: docker tag ds-portfolio-ui registry.digitalocean.com/ds-services-container/ds-portfolio-ui:${{ github.sha }}
       - name: Push image to DO Container Registry
-        run: docker push registry.digitalocean.com/ds-services/container/ds-portfolio-ui:${{ github.sha }}
+        run: docker push registry.digitalocean.com/ds-services-container/ds-portfolio-ui:${{ github.sha }}
 
   deploy:
     name: Configure and deploy to staging
