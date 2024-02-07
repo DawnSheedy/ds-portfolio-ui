@@ -34,5 +34,7 @@ jobs:
         uses: digitalocean/action-doctl@v2
         with:
           token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
+      - name: Authenticate kubectl
+        run: doctl kubernetes cluster kubeconfig save --expiry-seconds 600 ds-k8s
       - name: Helm Deploy
         run: helm upgrade --install --create-namespace -n stg --set image.tag=${{ github.event.release.tag_name }} --set ingress.hosts[0].host=dawnshee.com --set ingress.tls[0].hosts[0]=dawnshee.com ds-portfolio-ui ds-portfolio-ui
