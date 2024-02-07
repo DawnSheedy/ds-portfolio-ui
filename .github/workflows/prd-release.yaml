@@ -37,4 +37,4 @@ jobs:
       - name: Authenticate kubectl
         run: doctl kubernetes cluster kubeconfig save --expiry-seconds 600 ds-k8s
       - name: Helm Deploy
-        run: helm upgrade --install --create-namespace -n stg --set image.tag=${{ github.event.release.tag_name }} --set envPrefix=prd ds-portfolio-ui ds-portfolio-ui
+        run: helm upgrade --install --create-namespace -n prd --set image.tag=${{ github.event.release.tag_name }} --set envPrefix=prd ds-portfolio-ui ds-portfolio-ui
