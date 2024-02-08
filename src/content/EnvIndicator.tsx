@@ -26,7 +26,7 @@ export const EnvIndicator = () => {
         UI Version: {packageJson.name}:{packageJson.version}
       </div>
       <div className="float-right align-middle dark:text-slate-400 text-slate-500">
-        API Version:
+        API Version:{" "}
         {isLoading
           ? "Loading API Info..."
           : `${status?.appName}:${status?.version}`}
