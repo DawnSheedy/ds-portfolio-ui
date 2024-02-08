@@ -22,7 +22,7 @@ export const EnvIndicator = () => {
       <span className="align-middle">
         {env === Environment.Dev ? "Development" : "Staging"} Environment
       </span>
-      <div className="float-right align-middle dark:text-slate-400 text-slate-500 ml-4">
+      <div className="float-right align-middle dark:text-slate-400 text-slate-500 ml-2">
         UI Version: {packageJson.name}:{packageJson.version}
       </div>
       <div className="float-right align-middle dark:text-slate-400 text-slate-500">
